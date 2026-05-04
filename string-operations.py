@@ -45,9 +45,14 @@
 # print(text)
 # print(list)
 
-result = "apple, banana, cherry".split(", ")
+# result = "apple, banana, cherry".split(", ")
 
-print(result)
+# print(result)
+
+
+text = "Hello World"
+
+print(text[1:6:1])
 
 
 
