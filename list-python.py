@@ -92,27 +92,27 @@ students = {
 # print(students["akt_first_1"]["marks"].keys().values)
 
 
-students = [
-    {
-        "name":"John Doe",
-        "age": 20,
-        "grade": "A",
-        "marks": {
-            "math": 95,
-            "science": 90,
-            "english": 92
-        }
-    },
-    {
-        "name":"Jane Smith",
-        "age": 22,
-        "grade": "B",
-        "marks": {
-            "math": 85,
-            "science": 88,
-            "english": 90
-        }
-    }
-]
+# students = [
+#     {
+#         "name":"John Doe",
+#         "age": 20,
+#         "grade": "A",
+#         "marks": {
+#             "math": 95,
+#             "science": 90,
+#             "english": 92
+#         }
+#     },
+#     {
+#         "name":"Jane Smith",
+#         "age": 22,
+#         "grade": "B",
+#         "marks": {
+#             "math": 85,
+#             "science": 88,
+#             "english": 90
+#         }
+#     }
+# ]
 
-print(students[1]["marks"]["science"])
+# print(students[1]["marks"]["science"])
