@@ -57,10 +57,6 @@ fruits = ["apple", "banana", "cherry", "date", "elderberry"]
 num = int(input("Enter a number: "))
 check_prime = True
 
-if int(num**0.5) == num**0.5:
-    check_prime = False
-    print(f"{num} is not a prime number.")
-    exit()
 range_of_devisors = range(2, int(num**0.5)+1)
 for i in range_of_devisors:
     if num % i == 0:
