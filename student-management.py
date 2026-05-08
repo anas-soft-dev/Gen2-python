@@ -1,13 +1,17 @@
-while True:
-    print("="*20+"Login"+"="*20)
-    username = input("username : ").strip()
-    password = input("password : ").strip()
+# attempt = 0
+# while True:
+#     print("="*20+"Login"+"="*20)
+#     username = input("username : ").strip()
+#     password = input("password : ").strip()
 
-    if username == "admin" and password == "123456":
-        print("Successfully login")
-        break
-    else:
-        print("inavalid username or password")
+#     if username == "admin" and password == "123456":
+#         print("Successfully login")
+#         break
+#     else:
+#         attempt+=1
+#         print("inavalid username or password")
+
+#         if attempt >= 3: exit()
 
 print("="*20+"Admin Panel"+"="*20)
 
@@ -57,10 +61,51 @@ while True:
                 input()
         case 3:
             print("remove a record")
+            email = input("email : ")
+
+            is_found = False
+            new_list = []
+            with open(filename,"r") as file:
+                student_list = file.readlines()
+                for student in student_list:
+                    record = student.strip().split("||")
+                    record.pop()
+                    new_list.append("||".join(record))
+                    if record[1] == email.strip():
+                        is_found = True
+                        student_list.remove(student)
+                        break
+            
+            if is_found:
+                with open(filename,"w") as file:
+                    file.writelines(student_list)
+                    print("record Deleted")
+            else: print("Student not found with this email")
+
             input()
         case 4:
             print("update a record")
-            input()
+            email = input("email : ").strip()
+            is_found = False
+            with open(filename,"r") as file:
+                student_list = file.readlines()
+
+                for index, student in enumerate(student_list):
+                    record = student.strip().split("||")
+
+                    if record[1] == email:
+                        name = input("name : ")
+                        age = input("age : ")
+                        student_list[index] = f"{name}||{email}||{age}\n"
+                        is_found = True
+                        break
+            if is_found:
+                with open(filename,"w") as file:
+                    file.writelines(student_list)
+                    print("Updated")
+            else:
+                print("record not found")
+            input("enter ..")
         case _:
             print("invalid choice")
     # For Windows

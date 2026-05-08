@@ -61,3 +61,8 @@
 #     print("Attribute Error")
 # except Exception as e:
 #     print("Error")
+
+
+
+for value, index in enumerate(["a","b","c"]):
+    print(value, index)
