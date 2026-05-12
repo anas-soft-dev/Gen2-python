@@ -18,6 +18,10 @@ print("="*20+"Admin Panel"+"="*20)
 import os
 
 filename = "students.txt"
+
+def read_file():
+    with open(filename,"r") as file:
+        return filename.readlines()
 while True:
     print("Press 1: view data")
     print("Press 2: add data")
